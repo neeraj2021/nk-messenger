@@ -1,0 +1,21 @@
+p {
+  margin: 0px;
+  font-size: 15px;
+  width: fit-content;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.user_message {
+  color: white;
+  background-color: blue;
+}
+
+.guest_message {
+  color: white;
+  background-color: red;
+}
+
+sub {
+  margin: 0px 0px;
+}
