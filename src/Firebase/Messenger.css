@@ -31,8 +31,14 @@ input[type="submit"] {
 }
 
 .message_box {
-  width: 60vw;
+  width: 95vw;
   display: block;
   margin: 0px auto;
   /* background-color: red; */
+}
+
+@media screen and (max-width: 400px) {
+  .user_input {
+    width: 95vw;
+  }
 }
