@@ -1,21 +1,42 @@
-p {
-  margin: 0px;
-  font-size: 15px;
+.message {
+  padding: 1px;
+  margin: -15px 0px;
   width: fit-content;
-  padding: 2px 8px;
+  max-width: 70%;
+  overflow-wrap: break-word;
+  /* background-color: pink; */
+}
+
+.message_user {
+  margin-left: auto;
+  color: rgb(0, 0, 0);
+  text-align: left !important;
+}
+
+.message_user > #user {
+  display: block;
+  position: relative;
+  text-align: right;
+}
+
+#user {
+  height: 4px;
+  font-size: 14px;
+}
+
+.message_userCard {
+  background-color: rgb(86, 70, 215, 0.69) !important;
+  padding: 0px 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 25px;
   border-radius: 4px;
 }
 
-.user_message {
-  color: white;
-  background-color: blue;
-}
-
-.guest_message {
-  color: white;
-  background-color: red;
-}
-
-sub {
-  margin: 0px 0px;
+.message_guestCard {
+  background-color: rgb(229, 217, 65, 0.67) !important;
+  padding: 0px 10px;
+  font-weight: 600;
+  font-size: 25px;
+  border-radius: 4px;
 }

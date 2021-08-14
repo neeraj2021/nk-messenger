@@ -1,8 +1,9 @@
 import React from "react";
 import Messenger from "./Firebase/Messenger";
+import "./App.css";
 export default function App() {
   return (
-    <div>
+    <div className="bg-color">
       <Messenger />
     </div>
   );

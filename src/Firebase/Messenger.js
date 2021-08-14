@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Message from "./Message";
 import firebase from "firebase";
 import db from "./FireBase";
+import "./Messenger.css";
 
 export default function Messenger() {
   const [input, setInput] = useState("");
@@ -28,30 +29,39 @@ export default function Messenger() {
 
   useEffect(() => {
     setUsername(prompt("enter your name"));
-    // setUsername("123");
   }, []);
 
   return (
     <div>
-      <div>
-        <h2>Hello {username}</h2>
-        <div className="form_input">
-          <form>
-            <input
-              type="text"
-              name="message"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-            />
-            <input
-              type="submit"
-              disabled={!input}
-              value="Submit"
-              onClick={submitForm}
-            />
-          </form>
+      <div className="px-4 py-2 text-center">
+        <i className="fab fa-facebook-messenger"></i>
+        <h1 className="display-6 fw-bold">Welcome {username}</h1>
+        <div className="col-lg-6 mx-auto">
+          <div className="d-grid gap-2 d-sm-flex justify-content-sm-center"></div>
         </div>
       </div>
+      <hr />
+
+      <div className="user_input my-2">
+        <form>
+          <input
+            type="text"
+            name="message"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Enter Your Message"
+          />
+          <input
+            type="submit"
+            disabled={!input}
+            value="Submit"
+            onClick={submitForm}
+            id="basic-addon2"
+            value="Send"
+          />
+        </form>
+      </div>
+      <br />
       <div className="message_box">
         {messages.map((ele, index) => {
           return <Message key={index} username={username} message={ele} />;

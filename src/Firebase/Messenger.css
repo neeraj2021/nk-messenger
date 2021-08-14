@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+i {
+  font-size: 40px;
+}
+
+.user_input {
+  margin: auto;
+  width: 60vw;
+  margin-bottom: 8px;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 8px;
+  font-size: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 20%;
+  color: black;
+  padding: 8px;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.message_box {
+  width: 60vw;
+  display: block;
+  margin: 0px auto;
+  /* background-color: red; */
+}
