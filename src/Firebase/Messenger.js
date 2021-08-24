@@ -37,8 +37,8 @@ export default function Messenger() {
   }, []);
 
   useEffect(() => {
-    // setUsername(prompt("enter your name"));
-    setUsername("134");
+    setUsername(prompt("enter your name"));
+    // setUsername("134");
   }, []);
 
   return (
