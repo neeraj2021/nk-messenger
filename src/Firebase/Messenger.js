@@ -25,16 +25,20 @@ export default function Messenger() {
       .onSnapshot((snapshot) => {
         setMessages(
           snapshot.docs.map((ele) => {
-            console.log(ele);
-            return ele.data();
+            // console.log("ele = ", ele.id);
+            const single_message = {
+              id: ele.id,
+              data: ele.data(),
+            };
+            return single_message;
           })
         );
       });
   }, []);
 
   useEffect(() => {
-    setUsername(prompt("enter your name"));
-    // setUsername("13");
+    // setUsername(prompt("enter your name"));
+    setUsername("134");
   }, []);
 
   return (
@@ -45,6 +49,7 @@ export default function Messenger() {
         <div className="col-lg-6 mx-auto">
           <div className="d-grid gap-2 d-sm-flex justify-content-sm-center"></div>
         </div>
+        <p>* Double Click to Delete Message</p>
       </div>
       <hr />
 
@@ -70,7 +75,14 @@ export default function Messenger() {
       <br />
       <div className="message_box">
         {messages.map((ele, index) => {
-          return <Message key={index} username={username} message={ele} />;
+          return (
+            <Message
+              key={index}
+              username={username}
+              message={ele.data}
+              message_id={ele.id}
+            />
+          );
         })}
       </div>
     </div>
