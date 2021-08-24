@@ -23,7 +23,12 @@ export default function Messenger() {
     db.collection("messages")
       .orderBy("timestamp", "desc")
       .onSnapshot((snapshot) => {
-        setMessages(snapshot.docs.map((ele) => ele.data()));
+        setMessages(
+          snapshot.docs.map((ele) => {
+            console.log(ele);
+            return ele.data();
+          })
+        );
       });
   }, []);
 
@@ -33,7 +38,7 @@ export default function Messenger() {
   }, []);
 
   return (
-    <div>
+    <div style={{ minHeight: "100vh" }}>
       <div className="px-4 py-2 text-center">
         <i className="fab fa-facebook-messenger"></i>
         <h1 className="display-6 fw-bold">Welcome {username}</h1>

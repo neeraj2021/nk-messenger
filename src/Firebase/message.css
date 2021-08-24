@@ -17,11 +17,15 @@
   display: block;
   position: relative;
   text-align: right;
+  margin-top: 10px;
+  opacity: 0.8;
 }
 
 #user {
   height: 4px;
   font-size: 14px;
+  margin-top: 10px;
+  opacity: 0.8;
 }
 
 .message_userCard {
