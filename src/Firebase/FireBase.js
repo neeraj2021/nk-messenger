@@ -1,12 +1,12 @@
 import firebase from "firebase";
 
 const firebaseApp = firebase.initializeApp({
-  apiKey: "AIzaSyACOP0VOWYCUX9ihtwdjiRNxdSq0F9gwU8",
-  authDomain: "nk-messenger-2567a.firebaseapp.com",
-  projectId: "nk-messenger-2567a",
-  storageBucket: "nk-messenger-2567a.appspot.com",
-  messagingSenderId: "505850474441",
-  appId: "1:505850474441:web:0f9517622f5d5046910218",
+  apiKey: "AIzaSyBHD2yFA_bpQw_hiZPQs-TiyxuU6uRwJ8A",
+  authDomain: "nk-messenger-15fcf.firebaseapp.com",
+  projectId: "nk-messenger-15fcf",
+  storageBucket: "nk-messenger-15fcf.appspot.com",
+  messagingSenderId: "1009323274261",
+  appId: "1:1009323274261:web:c98314cd4812e63b645e1c",
 });
 
 const db = firebaseApp.firestore();
